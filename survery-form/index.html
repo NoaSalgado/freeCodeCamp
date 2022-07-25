@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Coding Camp Registration Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h1 id="title">Coding Camp Registration Form</h1>
+        <p id="description">Sign up now and start learning to code!!</p>
+
+        <form action="/" class="form">
+          <div class="form-group">
+            <label for="name" id="name-label" class="label">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-control"
+              placeholder="Your name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" id="email-label" class="label">Email: </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              placeholder="yourname@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="number" id="number-label" class="label">Age:</label>
+            <input
+              type="number"
+              name="number"
+              id="number"
+              class="form-control"
+              min="10"
+              max="120"
+              placeholder="18"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="dropdown" id="dropdown-label" class="label"
+              >How did you hear about us?</label
+            >
+            <select name="dropdown" id="dropdown" class="form-control">
+              <option value="twitter">Twitter</option>
+              <option value="youtube">YouTube</option>
+              <option value="blog">Blog</option>
+              <option value="friend">Friend recomendation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <p class="label">
+              What area of web development are you intereseted in?
+            </p>
+            <label for="area1" class="label">
+              <input type="radio" name="area" id="area1" />
+              Front-End
+            </label>
+
+            <label for="area2">
+              <input type="radio" name="area" />
+              Back-End
+            </label>
+
+            <label for="area3" class="label">
+              <input type="radio" name="area" />
+              Full-Stack
+            </label>
+          </div>
+
+          <div class="form-group" class="label">
+            <p class="label">What technologies do you already know?</p>
+            <label for="html">
+              <input type="checkbox" value="html" />
+              HTML
+            </label>
+
+            <label for="css" class="label">
+              <input type="checkbox" value="css" />
+              CSS
+            </label>
+
+            <label for="javascript" class="label">
+              <input type="checkbox" value="javascript" />
+              JavaScript
+            </label>
+
+            <label for="sql" class="label">
+              <input type="checkbox" value="sql" />
+              SQL
+            </label>
+          </div>
+
+          <div class="form-group">
+            <p class="label">Tell us about your background:</p>
+            <textarea name="bio" id="bio" class="textarea"></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" id="submit">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

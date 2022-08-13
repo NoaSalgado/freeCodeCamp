@@ -9,9 +9,9 @@
   </head>
   <body>
     <!--HEADER-->
-    <header id="head">
-      <nav class="navbar">
-        <ul class="navbar-links">
+    <header id="header">
+      <nav id="navbar" class="flex">
+        <ul class="navbar-links flex">
           <li>
             <a href="#welcome-section">About</a>
           </li>
@@ -30,10 +30,13 @@
     <main>
       <!--Welcome section-->
       <section id="welcome-section">
-        <div class="flex">
-          <h1>HI!! 👋. I`m Noa Salgado</h1>
+        <div class="container flex">
+          <h1>HI!! 👋 I`m Noa Salgado</h1>
           <h2>A web developer in progress</h2>
-          <p>Currently leraning at freeCodeCamp</p>
+          <p>
+            Currently leraning at
+            <a href="https://www.freecodecamp.org/learn">freeCodeCamp</a>
+          </p>
           <img
             src="img/day13-it-girl.png"
             alt="Ilustration of a girl coding at her laptop"
@@ -46,12 +49,12 @@
         <div class="container">
           <h2>MY PROJECTS</h2>
           <p>
-            These are the projects that I realized during the Responsive Web
-            Design Certification
+            These are the projects that I realized during the
+            <span>Responsive Web Design Certification</span>
           </p>
 
           <!--Survey form project-->
-          <div class="grid container">
+          <div class="grid-container">
             <div class="grid-element">
               <a href="https://noasalgado.github.io/freeCodeCamp/survery-form/">
                 <img
@@ -60,7 +63,7 @@
                 />
               </a>
               <div class="grid-element-text">
-                <h3 class="project-title">Survey Form</h3>
+                <h3 class="pproject-tile">Survey Form</h3>
                 <a
                   href="https://github.com/NoaSalgado/freeCodeCamp/tree/main/survery-form"
                   >View code</a
@@ -69,58 +72,55 @@
             </div>
 
             <!--Tribute page project-->
-            <div class="grid container">
-              <div class="grid-element">
-                <a href="https://noasalgado.github.io/freeCodeCamp/tribute-page/">
-                  <img
-                    src="img/tribute-page.png"
-                    alt="Image of my tribute page project"
-                  />
-                </a>
-                <div class="grid-element-text">
-                  <h3 class="project-title">Tribute Page</h3>
-                  <a
-                    href="https://github.com/NoaSalgado/freeCodeCamp/tree/main/tribute-page"
-                    >View code</a
-                  >
-                </div>
+            <div class="grid-element">
+              <a href="https://noasalgado.github.io/freeCodeCamp/tribute-page/">
+                <img
+                  src="img/tribute-page.png"
+                  alt="Image of my tribute page project"
+                />
+              </a>
+              <div class="grid-element-text">
+                <h3 class="project-tile">Tribute Page</h3>
+                <a
+                  href="https://github.com/NoaSalgado/freeCodeCamp/tree/main/tribute-page"
+                  >View code</a
+                >
               </div>
+            </div>
 
-              <!--Landing page project-->
-              <div class="grid container">
-                <div class="grid-element">
-                  <a href="https://noasalgado.github.io/freeCodeCamp/landing-page/">
-                    <img
-                      src="img/landing-page.png"
-                      alt="Image of my landing-page project"
-                    />
-                  </a>
-                  <div class="grid-element-text">
-                    <h3 class="project-title">Landing Page</h3>
-                    <a
-                      href="https://github.com/NoaSalgado/freeCodeCamp/tree/main/landing-page"
-                      >View code</a
-                    >
-                  </div>
-                </div>
+            <!--Landing page project-->
+            <div class="grid-element">
+              <a href="https://noasalgado.github.io/freeCodeCamp/landing-page/">
+                <img
+                  src="img/landing-page.png"
+                  alt="Image of my landing-page project"
+                />
+              </a>
+              <div class="grid-element-text">
+                <h3 class="project-tile">Landing Page</h3>
+                <a
+                  href="https://github.com/NoaSalgado/freeCodeCamp/tree/main/landing-page"
+                  >View code</a
+                >
+              </div>
+            </div>
 
-                <!--Techincal documentation page project-->
-                <div class="grid container">
-                  <div class="grid-element">
-                    <a href="https://noasalgado.github.io/freeCodeCamp/survery-form/">
-                      <img
-                        src="img/technical-documentation-page.png"
-                        alt="Image of my technical documentation page project"
-                      />
-                    </a>
-                    <div class="grid-element-text">
-                      <h3 class="project-title">Technical Documentation Page</h3>
-                      <a
-                        href="https://github.com/NoaSalgado/freeCodeCamp/tree/main/technical-documentation-page"
-                        >View code</a
-                      >
-                    </div>
-                  </div>
+            <!--Techincal documentation page project-->
+            <div class="grid-element">
+              <a href="https://noasalgado.github.io/freeCodeCamp/survery-form/">
+                <img
+                  src="img/technical-documentation-page.png"
+                  alt="Image of my technical documentation page project"
+                />
+              </a>
+              <div class="grid-element-text">
+                <h3 class="project-tile">Tech Documentation</h3>
+                <a
+                  href="https://github.com/NoaSalgado/freeCodeCamp/tree/main/technical-documentation-page"
+                  >View code</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -130,21 +130,26 @@
           <h2>CONTACT</h2>
           <p>Feel free to send me a message!!</p>
           <div class="flex contact-links">
-            <a href="#" class="contact-link">
+            <a href="#" class="contact-link" target="_blank">
               <i class="fa-solid fa-envelope"></i> Mail
             </a>
 
-            <a href="#" class="contact-link">
+            <a href="#" class="contact-link" target="_blank">
               <i class="fa-brands fa-twitter"></i> Twitter
             </a>
 
-            <a href="#" class="contact-link">
+            <a
+              href="https://github.com/"
+              id="profile-link"
+              class="contact-link"
+              target="_blank"
+            >
               <i class="fa-brands fa-github"></i> GitHub
             </a>
           </div>
         </div>
+        <hr />
       </section>
-
     </main>
     <!--END MAIN-->
 
@@ -153,10 +158,16 @@
       <p>&copy; Noa Salgado 2022</p>
       <p>
         Project part of the
-        <span>Responsive Web Design Certification from freecodecamp</span>
+        <a
+          href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-personal-portfolio-webpage-project/build-a-personal-portfolio-webpage"
+          >Responsive Web Design Certification from freeCodeCamp</a
+        >
       </p>
     </footer>
     <!--END FOOTER-->
-    <script src="https://kit.fontawesome.com/a22f972ade.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a22f972ade.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

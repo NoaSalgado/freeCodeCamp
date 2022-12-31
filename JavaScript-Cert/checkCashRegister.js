@@ -19,15 +19,13 @@ function checkCashRegister(price, cash, cid) {
   };
 
   let returnChange = cash - price;
-  console.log(returnChange);
   const cashInDrawer = cid.reduce((acc, curr) => acc + curr[1], 0);
-  console.log(cashInDrawer);
 
   if (cashInDrawer < returnChange) {
     change.status = 'INSUFFICIENT_FUNDS';
   } else if (cashInDrawer === returnChange) {
     change.status = 'CLOSED';
-    change.change.push[cashInDrawer];
+    change.change = cid.reverse();
   } else {
     for (let coin in coins) {
       let coinQuantity = 0;
@@ -35,12 +33,13 @@ function checkCashRegister(price, cash, cid) {
         coinQuantity += coins[coin];
         coinsInCash[coin] -= coins[coin];
         returnChange -= coins[coin];
+        returnChange = returnChange.toFixed(2);
       }
       if (coinQuantity > 0) {
         change.change.push([coin, coinQuantity]);
       }
     }
-    if (returnChange === 0) {
+    if (returnChange === '0.00') {
       change.status = 'OPEN';
     } else {
       change.status = 'INSUFFICIENT_FUNDS';
@@ -49,17 +48,3 @@ function checkCashRegister(price, cash, cid) {
   }
   return change;
 }
-
-console.log(
-  checkCashRegister(19.5, 20, [
-    ['PENNY', 0.5],
-    ['NICKEL', 0],
-    ['DIME', 0],
-    ['QUARTER', 0],
-    ['ONE', 0],
-    ['FIVE', 0],
-    ['TEN', 0],
-    ['TWENTY', 0],
-    ['ONE HUNDRED', 0],
-  ])
-);
